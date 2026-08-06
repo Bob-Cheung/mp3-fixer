@@ -11,8 +11,8 @@ npm run build
 CURRENT_BRANCH=$(git branch --show-current)
 echo "📌 当前分支: $CURRENT_BRANCH"
 
-# 3. 检查工作区是否有 dist/ 以外的未提交更改
-DIRTY=$(git status --porcelain | grep -v '^.[M ] dist/' || true)
+# 3. 检查工作区是否有 dist/ 和 .claude/ 以外的未提交更改
+DIRTY=$(git status --porcelain | grep -v -E '(dist/|\.claude/)' || true)
 if [[ -n "$DIRTY" ]]; then
   echo "⚠️  警告: 工作区有未提交的更改（dist/ 除外），请先提交或暂存。"
   echo "$DIRTY"
