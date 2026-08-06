@@ -29,12 +29,16 @@ fi
 echo "🌿 创建新的 gh-pages 分支..."
 git checkout --orphan gh-pages
 
-# 6. 清空所有内容
+# 6. 备份 dist，清空工作区
+echo "📋 备份构建产物..."
+TEMP_DIST=$(mktemp -d)
+cp -r dist/* "$TEMP_DIST/"
+
 git rm -rf --ignore-unmatch . 2>/dev/null || true
 
-# 7. 复制 dist 内容到根目录
-echo "📋 复制构建产物..."
-cp -r dist/* .
+# 7. 恢复构建产物到根目录
+cp -r "$TEMP_DIST"/* .
+rm -rf "$TEMP_DIST"
 
 # 8. 添加 .nojekyll（防止 GitHub Pages 忽略以下划线开头的文件）
 touch .nojekyll
