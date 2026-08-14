@@ -181,7 +181,7 @@ npm run deploy
 
 然后在仓库 **Settings → Pages** 中将 Source 设为 `Deploy from a branch`，分支选 `gh-pages`，根目录 `/ (root)`，保存即可。
 
-> 注意：`vite.config.ts` 中已配置 `base: '/mp3-fixer/'`，如果你的仓库名不同，请对应修改。
+> 注意：`vite.config.ts` 中已配置 `base: '/mp3-fixer/'`，如果你的仓库名不同，请对应修改，此配置只针对于部署到GitHub Pages上，现已关闭配置 `base: '/mp3-fixer/'`，已更改部署到`cloudflare`。
 
 ## MP3 识别原理
 
