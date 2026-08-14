@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://bob-cheung.github.io/mp3-fixer/"><strong>🌐 在线使用</strong></a> ·
+  <a href="[https://bob-cheung.github.io/mp3-fixer/](https://mp3-fixer.pages.dev/)"><strong>🌐 在线使用</strong></a> ·
   <a href="#快速开始"><strong>📦 本地运行</strong></a> ·
   <a href="#部署到-github-pages"><strong>🚀 部署</strong></a>
 </p>
